@@ -25,7 +25,7 @@ input {
 .content-wrapper {
   width: calc(100% - 80px);
   margin: 0 auto;
-  padding-top: 40px;
+  padding: 40px 0;
   font-size: 0;
 }
 
