@@ -2,9 +2,43 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>cocoa-alignment</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-
+    <div class="content-wrapper">
+      <img class="logo" src="img/cocoda_logo.png">
+      <h1>アカウントの作成</h1>
+      <p class="login">ログインはこちら</p>
+      <form class="" action="index.html" method="post">
+        <input class="input__name" type="text" placeholder="名前">
+        <input class="input__mail" type="text" placeholder="メールアドレス">
+        <input class="input__user-name" type="text" placeholder="ユーザー名">
+        <p class="notes">半角英字、数字、ピリオドを使用できます</p>
+        <div class="password">
+          <input class="input__password" type="password" placeholder="パスワード">
+          <input id="checkbox-change" type="checkbox">
+          <label for="checkbox-change"><img class="icon__eye-slash" src="img/eye-slash-regular.svg"></label>
+        </div>
+        <p class="notes">半角英字、数字、記号を組み合わせて8文字以上で<br>入力してください</p>
+        <input class="input__password input__confirm" type="password" placeholder="確認">
+        <input id="checkbox-agree" type="checkbox">
+        <label for="checkbox-agree" class="label__agree">利用規約とプライバシーポリシーに同意する</label>
+        <input type="submit" name="" value="アカウントを作成">
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(function() {
+      $('#checkbox-change').change(function(){
+        if ( $(this).prop('checked') ) {
+          $('.input__password').attr('type','text');
+        } else {
+          $('.input__password').attr('type','password');
+        }
+      });
+    });
+    </script>
   </body>
 </html>
