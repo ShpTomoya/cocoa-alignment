@@ -16,10 +16,16 @@ p {
   margin: 0;
 }
 
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .content-wrapper {
   width: calc(100% - 80px);
   margin: 0 auto;
-  padding-top: 80px;
+  padding-top: 40px;
   font-size: 0;
 }
 
